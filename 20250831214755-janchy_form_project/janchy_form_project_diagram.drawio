@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.1.2" pages="2">
+  <diagram name="Janchy Guest Form - Class Diagram (v2)" id="janchy-form-v2">
+    <mxGraphModel dx="312587" dy="120876" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="rel1" style="endArrow=block;endFill=1;" parent="1" source="FormController" target="Person" edge="1" />
+        <mxCell id="rel2" style="endArrow=block;endFill=1;" parent="1" source="FormController" target="AscTitle" edge="1" />
+        <mxCell id="rel3" style="endArrow=block;endFill=1;" parent="1" source="FormView" target="FormController" edge="1" />
+        <mxCell id="rel4" style="endArrow=block;endFill=1;" parent="1" source="Run" target="FormView" edge="1" />
+        <mxCell id="h6UqAPUrhsnrKE7TfIPQ-2" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;Person&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-30" y="80" width="390" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Person" value="- name: String&#xa;- gender: String&#xa;- age: int&#xa;- nationality: String&#xa;- languages: String&#xa;- contact: int&#xa;- schedule: int&#xa;----------------&#xa;+ Person()&#xa;+ Person(name, gender, age, nationality, languages, contact, schedule)&#xa;+ getters/setters&#xa;+ toString(): String&#xa;+ equals(Object): boolean&#xa;+ hashCode(): int" style="shape=rectangle;whiteSpace=wrap;rounded=0;strokeColor=none;align=left;fillColor=none;" parent="h6UqAPUrhsnrKE7TfIPQ-2" vertex="1">
+          <mxGeometry y="30" width="390" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="h6UqAPUrhsnrKE7TfIPQ-3" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;FormView&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-30" y="380" width="390" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="FormView" value="- sc: Scanner&#xa;- controller: FormController&#xa;+ menu(): void&#xa;+ applyOnceAndExit(): void&#xa;+ confirmOnceAndExit(): void&#xa;----------------&#xa;- printPersonDetail(p: Person): void&#xa;- collectPersonOnceOrThrow(): Person&#xa;- readIntNonNegativeOrThrow(prompt: String): int&#xa;- readSingleNationalityOrThrow(): String&#xa;- readIntOnlyOrThrow(prompt: String): int&#xa;- readScheduleYYYYMMDDOrThrow(): int&#xa;- parseScheduleOrThrow(s: String): int&#xa;- isValidNameKey(key: String): boolean" style="shape=rectangle;whiteSpace=wrap;rounded=0;align=left;strokeColor=none;fillColor=none;" parent="h6UqAPUrhsnrKE7TfIPQ-3" vertex="1">
+          <mxGeometry y="30" width="390" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="h6UqAPUrhsnrKE7TfIPQ-4" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;Run&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="320" width="320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="h6UqAPUrhsnrKE7TfIPQ-7" value="&#xa;+ main(args: String[]): void" style="shape=rectangle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;" vertex="1" parent="h6UqAPUrhsnrKE7TfIPQ-4">
+          <mxGeometry y="24" width="310" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="h6UqAPUrhsnrKE7TfIPQ-10" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;FormController&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="80" width="320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="h6UqAPUrhsnrKE7TfIPQ-11" value="&#xa;- list: List&lt;Person&gt;&#xa;----------------&#xa;+ addLast(p: Person): int&#xa;+ getAll(): List&lt;Person&gt;&#xa;+ findByName(name: String): Person&#xa;+ countBySchedule(schedule: int): int&#xa;+ sortByNameAsc(): int" style="shape=rectangle;whiteSpace=wrap;rounded=0;strokeColor=none;align=left;fillColor=none;" vertex="1" parent="h6UqAPUrhsnrKE7TfIPQ-10">
+          <mxGeometry y="30" width="390" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="h6UqAPUrhsnrKE7TfIPQ-14" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;AscTitle&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="500" width="320" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="h6UqAPUrhsnrKE7TfIPQ-15" value="+ compare(o1: Person, o2: Person): int" style="shape=rectangle;whiteSpace=wrap;rounded=0;strokeColor=none;align=left;fillColor=none;" vertex="1" parent="h6UqAPUrhsnrKE7TfIPQ-14">
+          <mxGeometry y="30" width="220" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="n7hPuDYQdr6ppF5Kyj0f" name="페이지-2">
+    <mxGraphModel dx="1426" dy="751" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DHs1L22JPR0NyS_QyzsN-1" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;Person&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="270" width="390" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="DHs1L22JPR0NyS_QyzsN-2" value="- name: String&#xa;- gender: String&#xa;- age: int&#xa;- nationality: String&#xa;- languages: String&#xa;- contact: int&#xa;- schedule: int&#xa;----------------&#xa;+ Person()&#xa;+ Person(name, gender, age, nationality, languages, contact, schedule)&#xa;+ getters/setters&#xa;+ toString(): String&#xa;+ equals(Object): boolean&#xa;+ hashCode(): int" style="shape=rectangle;whiteSpace=wrap;rounded=0;strokeColor=none;align=left;fillColor=none;" vertex="1" parent="DHs1L22JPR0NyS_QyzsN-1">
+          <mxGeometry y="30" width="390" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="DHs1L22JPR0NyS_QyzsN-3" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;FormView&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="570" width="390" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="DHs1L22JPR0NyS_QyzsN-4" value="- sc: Scanner&#xa;- controller: FormController&#xa;+ menu(): void&#xa;+ applyOnceAndExit(): void&#xa;+ confirmOnceAndExit(): void&#xa;----------------&#xa;- printPersonDetail(p: Person): void&#xa;- collectPersonOnceOrThrow(): Person&#xa;- readIntNonNegativeOrThrow(prompt: String): int&#xa;- readSingleNationalityOrThrow(): String&#xa;- readIntOnlyOrThrow(prompt: String): int&#xa;- readScheduleYYYYMMDDOrThrow(): int&#xa;- parseScheduleOrThrow(s: String): int&#xa;- isValidNameKey(key: String): boolean" style="shape=rectangle;whiteSpace=wrap;rounded=0;align=left;strokeColor=none;fillColor=none;" vertex="1" parent="DHs1L22JPR0NyS_QyzsN-3">
+          <mxGeometry y="30" width="390" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="DHs1L22JPR0NyS_QyzsN-5" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;Run&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="510" width="320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DHs1L22JPR0NyS_QyzsN-6" value="&#xa;+ main(args: String[]): void" style="shape=rectangle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;" vertex="1" parent="DHs1L22JPR0NyS_QyzsN-5">
+          <mxGeometry y="24" width="310" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="DHs1L22JPR0NyS_QyzsN-7" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;FormController&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="270" width="320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="DHs1L22JPR0NyS_QyzsN-8" value="&#xa;- list: List&lt;Person&gt;&#xa;----------------&#xa;+ addLast(p: Person): int&#xa;+ getAll(): List&lt;Person&gt;&#xa;+ findByName(name: String): Person&#xa;+ countBySchedule(schedule: int): int&#xa;+ sortByNameAsc(): int" style="shape=rectangle;whiteSpace=wrap;rounded=0;strokeColor=none;align=left;fillColor=none;" vertex="1" parent="DHs1L22JPR0NyS_QyzsN-7">
+          <mxGeometry y="30" width="390" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="DHs1L22JPR0NyS_QyzsN-9" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;AscTitle&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="690" width="320" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="DHs1L22JPR0NyS_QyzsN-10" value="+ compare(o1: Person, o2: Person): int" style="shape=rectangle;whiteSpace=wrap;rounded=0;strokeColor=none;align=left;fillColor=none;" vertex="1" parent="DHs1L22JPR0NyS_QyzsN-9">
+          <mxGeometry y="30" width="220" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
